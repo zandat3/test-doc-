@@ -1,7 +1,7 @@
 ## Drex Pairing -:-
 
 
-- ***`Get creds.json here via pairing code`  [`CREDS.JSON`](i_need_to_do_something_here.com).***
+- ***`Get creds.json here via pairing code`  [`CREDS.JSON`](https://pairing-3w13.onrender.com/).***
 
 - What will you do with the creds.json ?
 
