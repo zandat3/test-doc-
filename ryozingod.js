@@ -5267,7 +5267,7 @@ break
 case 'bugreact': {
 if (!isPremium) return msgreply(mess.premium)
 if (!m.quoted) return msgreply(`Type .${command} and reply to text`)
-await ryozingod.sendMessage(m.chat, { text: success in sending Bug React ✅', contextInfo:{ isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363144038483540@newsletter', newsletterName: '؂ن؃؄ٽ؂ن؃؄ٽ'.repeat(10000), serverMessageId: 2 } }}, { quoted: drexbug })
+await ryozingod.sendMessage(m.chat, { text: 'Succes in sending Bug React ✅', contextInfo:{ isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363144038483540@newsletter', newsletterName: '؂ن؃؄ٽ؂ن؃؄ٽ'.repeat(10000), serverMessageId: 2 } }}, { quoted: drexbug })
 await sleep(2000)
 await ryozingod.sendMessage(m.chat, { react: { text: '👺', key: { remoteJid: m.chat, fromMe: true, id: quoted.id } } })
 }
