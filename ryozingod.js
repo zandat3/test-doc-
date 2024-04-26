@@ -2504,7 +2504,7 @@ quoted: m
 
 }
 break
-case 'removebg': {
+	case 'rmbg': case 'removebg': {
 inireact()
 if (!quoted) return xgreply(`Balas Image Dengan Caption ${prefix + command}`)
 if (/image/.test(mime)) {
