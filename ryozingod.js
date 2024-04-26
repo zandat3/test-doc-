@@ -4322,11 +4322,35 @@ inireact()
 if (!isPremium) return xgreply(mess.premium)
 if (!isGroup) return xgreply('Only Group')
 if (!isAdmins && !isOwner) return xgreply('Only Admin')
-if (!isBotAdmins) return xgreply(`Bot Bukan Admi:(`)
+if (!isBotAdmins) return xgreply(`Bot is not admin:(`)
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await ryozingod.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => xgreply(util.format(res))).catch((err) => xgreply(util.format(err)))
 }
 break
+		
+		case "admin" : { 
+                if (!isPremium) return xgreply(mess.premium)
+if (!isGroup) return xgreply('Only Group')
+if (!isAdmins && !isOwner) return xgreply('Only Admin')
+if (!isBotAdmins) return xgreply(`Bot is not admin:(`) 
+                 await ryozingod.groupParticipantsUpdate(m.chat,  [m.sender], 'promote'); 
+ xgreply('𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐂𝐫𝐨𝐰𝐧𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✞'); 
+          }
+          break
+
+		 case "promote" : { 
+                 if (!isPremium) return xgreply(mess.premium)
+if (!isGroup) return xgreply('Only Group')
+if (!isAdmins && !isOwner) return xgreply('Only Admin')
+if (!isBotAdmins) return xgreply(`Bot Bukan Admi:(`) 
+ if (!m.quoted && !m.mentionedJid) throw `Tag someone with the command!`; 
+                 let users = m.mentionedJid[0] ? m.mentionedJid : m.quoted ? [m.quoted.sender] : [text.replace(/[^0-9]/g, '')+'@s.whatsapp.net']; 
+  
+                 await ryozingod.groupParticipantsUpdate(m.chat, users, 'promote'); 
+ xgreply('  𝐂𝐫𝐨𝐰𝐧𝐞𝐝 𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲! 👑'); 
+}
+break
+
 case 'icon': case 'setppgroup': {
 inireact()
 if (!isDeveloper) return xgreply(mess.usingsetpp)
